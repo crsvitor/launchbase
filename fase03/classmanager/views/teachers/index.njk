@@ -1,0 +1,84 @@
+<<<<<<< HEAD
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="card table-container">
+    <table width="100%">
+		<a href="/teachers/signup">Novo</a>
+		<thead>
+			<tr>
+				<th>
+					Professor
+				</th>
+				<th>
+					Diciplinas
+				</th>
+				<th>
+					Ação
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for teacher in teachers %}
+			<input type="hidden" name="id" value="{{teacher.id}}">
+				<tr>
+					<td>
+						<span style="background-image: url({{teacher.avatar_url}})"></span>
+						{{teacher.name}}
+					</td>
+					<td>
+						{% for service in teacher.services.split(",") %}
+							<span class="service">{{service}}</span>
+						{% endfor %}
+					</td>
+					<td>
+						<a href="teachers/{{teacher.id}}">Ver</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+=======
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="card table-container">
+    <table width="100%">
+		<a href="/teachers/signup">Novo</a>
+		<thead>
+			<tr>
+				<th>
+					Professor
+				</th>
+				<th>
+					Diciplinas
+				</th>
+				<th>
+					Ação
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for teacher in teachers %}
+			<input type="hidden" name="id" value="{{teacher.id}}">
+				<tr>
+					<td>
+						<span style="background-image: url({{teacher.avatar_url}})"></span>
+						{{teacher.name}}
+					</td>
+					<td>
+						{% for service in teacher.services.split(",") %}
+							<span class="service">{{service}}</span>
+						{% endfor %}
+					</td>
+					<td>
+						<a href="teachers/{{teacher.id}}">Ver</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+>>>>>>> 4742a226abbdfe3227a596acddf3dbb5e27bdd58
+{% endblock content %}

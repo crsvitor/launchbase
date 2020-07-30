@@ -1,0 +1,102 @@
+<<<<<<< HEAD
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="card table-container">
+    <a href="/members/create">Novo</a>
+    <table width="100%">
+        <thead> {# cabeçalho #}
+           <tr> {# cada linha é uma tr #}
+               <th> {# cada coluna é uma th #}
+                   Membro
+               </th>
+               <th>
+                   Email
+               </th>
+               <th>
+                   Peso
+               </th>
+               <th>
+                   Altura
+               </th>
+               <th>
+                   Ação
+               </th>
+           </tr> 
+        </thead>
+        <tbody> {# corpo #}
+            {% for member in members %}
+                <tr> {# linha #}
+                    <td> {# coluna #}
+                        <span style="background-image: url({{member.avatar_url}})"></span>
+                        {{member.name}}
+                    </td>
+                     <td> {# coluna #}
+                        {{member.email}} 
+                    </td>
+                    <td> {# coluna #}
+                        {{member.weight}} kg
+                    </td>
+                    <td> {# coluna #}
+                        {{member.height}} cm
+                    </td>
+                    <td> {# coluna #}
+                        <a href="/members/{{member.id}}">ver</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+=======
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="card table-container">
+    <a href="/members/create">Novo</a>
+    <table width="100%">
+        <thead> {# cabeçalho #}
+           <tr> {# cada linha é uma tr #}
+               <th> {# cada coluna é uma th #}
+                   Membro
+               </th>
+               <th>
+                   Email
+               </th>
+               <th>
+                   Peso
+               </th>
+               <th>
+                   Altura
+               </th>
+               <th>
+                   Ação
+               </th>
+           </tr> 
+        </thead>
+        <tbody> {# corpo #}
+            {% for member in members %}
+                <tr> {# linha #}
+                    <td> {# coluna #}
+                        <span style="background-image: url({{member.avatar_url}})"></span>
+                        {{member.name}}
+                    </td>
+                     <td> {# coluna #}
+                        {{member.email}} 
+                    </td>
+                    <td> {# coluna #}
+                        {{member.weight}} kg
+                    </td>
+                    <td> {# coluna #}
+                        {{member.height}} cm
+                    </td>
+                    <td> {# coluna #}
+                        <a href="/members/{{member.id}}">ver</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+>>>>>>> 4742a226abbdfe3227a596acddf3dbb5e27bdd58
+{% endblock content %}

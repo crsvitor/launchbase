@@ -1,0 +1,87 @@
+<<<<<<< HEAD
+{% extends "layout.njk" %}
+
+{% block head %}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<title>Conteúdos</title>
+{% endblock head %}
+
+{% block content %}
+    <div class="title">
+        <h1>Cursos</h1>
+    </div>
+    <div class="courses-grid">
+        {% for item in items %}
+            <div class="card" id="{{ item.id }}">
+                <img src="assets/{{ item.id }}.svg" alt="{{ item.id }}">
+                <div class="card-info">    
+                    <p>{{ item.modules }}</p>
+                    <p>{{ item.price}}</p>
+                </div>
+            </div>
+        {% endfor %}   
+    </div>
+{% endblock content %}
+
+{# {% block modal %}
+    <div class="modal-overlay">
+        <div class="modal">
+            <a class="close-modal">
+                <i class="material-icons">close</i>
+            </a>
+            <a class="maximize">
+                <i class="material-icons">maximize</i>
+            </a>
+            <div class="modal-content">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>    
+{% endblock modal %} #}
+
+
+=======
+{% extends "layout.njk" %}
+
+{% block head %}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<title>Conteúdos</title>
+{% endblock head %}
+
+{% block content %}
+    <div class="title">
+        <h1>Cursos</h1>
+    </div>
+    <div class="courses-grid">
+        {% for item in items %}
+            <div class="card" id="{{ item.id }}">
+                <img src="assets/{{ item.id }}.svg" alt="{{ item.id }}">
+                <div class="card-info">    
+                    <p>{{ item.modules }}</p>
+                    <p>{{ item.price}}</p>
+                </div>
+            </div>
+        {% endfor %}   
+    </div>
+{% endblock content %}
+
+{# {% block modal %}
+    <div class="modal-overlay">
+        <div class="modal">
+            <a class="close-modal">
+                <i class="material-icons">close</i>
+            </a>
+            <a class="maximize">
+                <i class="material-icons">maximize</i>
+            </a>
+            <div class="modal-content">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>    
+{% endblock modal %} #}
+
+
+>>>>>>> 4742a226abbdfe3227a596acddf3dbb5e27bdd58

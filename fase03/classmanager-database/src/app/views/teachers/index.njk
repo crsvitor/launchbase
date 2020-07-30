@@ -1,0 +1,120 @@
+<<<<<<< HEAD
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="card table-container">
+	<div class="header">
+		<a class="button" href="/teachers/signup">Novo</a>
+		<form action="/teachers" method="GET">
+			<input type="text"  name="filter" placeholder="Nome ou Matéria" value={{filter}}>
+			<button type="submit">Filtrar</button>
+		</form>
+	</div>
+    <table width="100%">
+		<thead>
+			<tr>
+				<th>
+					Professor
+				</th>
+				<th>
+					Diciplinas
+				</th>
+				<th>
+					Alunos
+				</th>
+				<th>
+					Ação
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for teacher in teachers %}
+			<input type="hidden" name="id" value="{{teacher.id}}">
+				<tr>
+					<td>
+						<span style="background-image: url({{teacher.avatar_url}})"></span>
+						{{teacher.name}}
+					</td>
+					<td>
+						{% for service in teacher.subjects_taught.split(",") %}
+							<span class="service">{{service}}</span>
+						{% endfor %}
+					</td>
+					<td>
+						<span>{{teacher.total_students}}</span>
+					</td>
+					<td>
+						<a href="teachers/{{teacher.id}}">Ver</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<div class="pagination"
+	data-page={{pagination.page}}
+	data-total={{pagination.total}}
+	data-filter={{filter}}
+	></div>
+</div>
+=======
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="card table-container">
+	<div class="header">
+		<a class="button" href="/teachers/signup">Novo</a>
+		<form action="/teachers" method="GET">
+			<input type="text"  name="filter" placeholder="Nome ou Matéria" value={{filter}}>
+			<button type="submit">Filtrar</button>
+		</form>
+	</div>
+    <table width="100%">
+		<thead>
+			<tr>
+				<th>
+					Professor
+				</th>
+				<th>
+					Diciplinas
+				</th>
+				<th>
+					Alunos
+				</th>
+				<th>
+					Ação
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for teacher in teachers %}
+			<input type="hidden" name="id" value="{{teacher.id}}">
+				<tr>
+					<td>
+						<span style="background-image: url({{teacher.avatar_url}})"></span>
+						{{teacher.name}}
+					</td>
+					<td>
+						{% for service in teacher.subjects_taught.split(",") %}
+							<span class="service">{{service}}</span>
+						{% endfor %}
+					</td>
+					<td>
+						<span>{{teacher.total_students}}</span>
+					</td>
+					<td>
+						<a href="teachers/{{teacher.id}}">Ver</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<div class="pagination"
+	data-page={{pagination.page}}
+	data-total={{pagination.total}}
+	data-filter={{filter}}
+	></div>
+</div>
+>>>>>>> 4742a226abbdfe3227a596acddf3dbb5e27bdd58
+{% endblock content %}

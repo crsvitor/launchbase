@@ -1,0 +1,25 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "avatar_url": "https://www.campusfrance.org/sites/default/files/parrainage.jpg",
+      "name": "Leticia",
+      "email": "lele@gmail.com",
+      "birth": 1036886400000,
+      "schoolYear": "3-medio",
+      "studyHours": "2"
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "https://image-aws-us-west-2.vsco.co/4c9502/48125634/5ee1662bd042c91f76e68062/720x960/vsco5ee16635dde15.jpg",
+      "name": "Vitor de Castro",
+      "birth": 1024358400000,
+      "schooling": "completed-highschool",
+      "classWay": "classrom-attendence",
+      "services": "História, Geografia, Inglês, Matemática",
+      "createdAt": 1593839145469
+    }
+  ]
+}

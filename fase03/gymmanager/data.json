@@ -1,0 +1,26 @@
+{
+  "members": [
+    {
+      "avatar_url": "https://image-aws-us-west-2.vsco.co/4c9502/48125634/5ee1662bd042c91f76e68062/720x960/vsco5ee16635dde15.jpg",
+      "name": "Vitor de Castro",
+      "email": "v.crs@hotmail.com",
+      "birth": 1024358400000,
+      "gender": "M",
+      "blood": "O1",
+      "weight": "60",
+      "height": "170",
+      "id": 1
+    }
+  ],
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1575859694244-0b337bf58e0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "name": "Elaine",
+      "birth": 939513600000,
+      "gender": "F",
+      "services": "Basquete, Vôlei, Musculação",
+      "created_at": 1593648324690
+    }
+  ]
+}

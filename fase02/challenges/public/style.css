@@ -1,0 +1,568 @@
+<<<<<<< HEAD
+/*
+Deve ser aplicado um background
+Deve ser utilizada a fonte Roboto
+O header precisa ocupar todo o espaço lateral e superior (body sem margin)
+O header precisa ter um espaçamento interno de 30px em todas as direções
+Os links devem ter um espaçamento de 30px entre si
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --color-primary: #4a1575 ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #404363;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 1px solid #181925;
+}
+
+header .links {
+    text-align: center;
+}
+
+header .links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 30px;
+}
+
+header .links a:hover {
+    color: #777aff;
+    transition: color 200ms;
+}
+
+.container-about {
+   text-align: center;
+}
+
+.container-about .up {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.container-about .up img {
+    width: 300px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 2px solid var(--color-primary);
+}
+
+.container-about .up h1{
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: bold;
+}
+
+.container-about .up h2{
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: normal;
+    margin: 10px 0px 25px;
+    opacity: 0.8;
+}
+
+.container-about .up p {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.container-about .up ul {
+    margin-bottom: 40px;
+}
+
+.container-about .up ul li {
+    align-items: center;
+    margin: 5px 0;
+    opacity: 0.8;
+}
+
+.container-about #down {
+    text-align: center;
+}
+
+.container-about #down a {
+    align-items: center;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.container-about #down a:hover {
+    color: var(--color-primary);
+    transition: 200ms;
+}
+
+.title h1 {
+    text-align: center;
+    margin: 85px auto 35px;
+}
+
+
+.courses-grid {
+    margin-top: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    height: 300px;
+}
+
+.card img {
+    margin-bottom: 110px;
+}
+
+.card-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-info p + p {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card#launchbase:hover{
+    border: 1px solid #ff8800;
+}
+
+.card#gostack:hover{
+    border: 1px solid #00ff55;
+}
+
+.card#starter:hover{
+    border: 1px solid #911ffb;
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+.modal {
+    background-color: white;
+    width: 70%;
+    height: 70%;
+    margin: 6vh auto; /* centralizar a imagem */
+    position: relative;
+
+}
+
+.modal .close-modal {
+    color: black;
+    border: 1px solid white;
+    position: absolute; /* absolute ta sempre tentando pegar toda a tela, só respeita a classe pai */
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.modal-overlay.active { /* . para outra classe que tem espaço no nome */
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+}
+
+iframe {
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+}
+
+.modal .maximize {
+    color: black;
+    border: 1px solid white;
+    position: absolute; /* absolute ta sempre tentando pegar toda a tela, só respeita a classe pai */
+    left: 10px;
+    top: 15px;
+    cursor: pointer;
+}
+
+
+.modal.maximize2 {
+    background-color: white;
+    width: 95%;
+    height: 95%;
+    margin: 3vh auto; /* centralizar a imagem */
+    position: relative;
+}
+
+.modal.maximize2 iframe {
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    top: 3%;
+    right: 2%;
+}
+
+
+.wrapper2 {
+    margin: 0 auto;
+    max-width: 940px;
+    max-height: 50vh;
+
+
+}
+.courses-grid-template {
+    margin-top: 50px;
+    max-width: 940px;
+    max-height: 50vh;
+}
+
+.card2 {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    max-height: 600px;
+}
+
+.card2 h3 {
+    margin:50px;
+}
+
+.card2 a {
+    color: white;
+    margin-bottom: 150px;
+    margin-top: 50px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.card-info2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 30px;
+}
+
+.card-info2 p{
+    
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card-info2 p + p {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+=======
+/*
+Deve ser aplicado um background
+Deve ser utilizada a fonte Roboto
+O header precisa ocupar todo o espaço lateral e superior (body sem margin)
+O header precisa ter um espaçamento interno de 30px em todas as direções
+Os links devem ter um espaçamento de 30px entre si
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --color-primary: #4a1575 ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #404363;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 1px solid #181925;
+}
+
+header .links {
+    text-align: center;
+}
+
+header .links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 30px;
+}
+
+header .links a:hover {
+    color: #777aff;
+    transition: color 200ms;
+}
+
+.container-about {
+   text-align: center;
+}
+
+.container-about .up {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.container-about .up img {
+    width: 300px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 2px solid var(--color-primary);
+}
+
+.container-about .up h1{
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: bold;
+}
+
+.container-about .up h2{
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: normal;
+    margin: 10px 0px 25px;
+    opacity: 0.8;
+}
+
+.container-about .up p {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.container-about .up ul {
+    margin-bottom: 40px;
+}
+
+.container-about .up ul li {
+    align-items: center;
+    margin: 5px 0;
+    opacity: 0.8;
+}
+
+.container-about #down {
+    text-align: center;
+}
+
+.container-about #down a {
+    align-items: center;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.container-about #down a:hover {
+    color: var(--color-primary);
+    transition: 200ms;
+}
+
+.title h1 {
+    text-align: center;
+    margin: 85px auto 35px;
+}
+
+
+.courses-grid {
+    margin-top: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    height: 300px;
+}
+
+.card img {
+    margin-bottom: 110px;
+}
+
+.card-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-info p + p {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card#launchbase:hover{
+    border: 1px solid #ff8800;
+}
+
+.card#gostack:hover{
+    border: 1px solid #00ff55;
+}
+
+.card#starter:hover{
+    border: 1px solid #911ffb;
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+.modal {
+    background-color: white;
+    width: 70%;
+    height: 70%;
+    margin: 6vh auto; /* centralizar a imagem */
+    position: relative;
+
+}
+
+.modal .close-modal {
+    color: black;
+    border: 1px solid white;
+    position: absolute; /* absolute ta sempre tentando pegar toda a tela, só respeita a classe pai */
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.modal-overlay.active { /* . para outra classe que tem espaço no nome */
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+}
+
+iframe {
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+}
+
+.modal .maximize {
+    color: black;
+    border: 1px solid white;
+    position: absolute; /* absolute ta sempre tentando pegar toda a tela, só respeita a classe pai */
+    left: 10px;
+    top: 15px;
+    cursor: pointer;
+}
+
+
+.modal.maximize2 {
+    background-color: white;
+    width: 95%;
+    height: 95%;
+    margin: 3vh auto; /* centralizar a imagem */
+    position: relative;
+}
+
+.modal.maximize2 iframe {
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    top: 3%;
+    right: 2%;
+}
+
+
+.wrapper2 {
+    margin: 0 auto;
+    max-width: 940px;
+    max-height: 50vh;
+
+
+}
+.courses-grid-template {
+    margin-top: 50px;
+    max-width: 940px;
+    max-height: 50vh;
+}
+
+.card2 {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    max-height: 600px;
+}
+
+.card2 h3 {
+    margin:50px;
+}
+
+.card2 a {
+    color: white;
+    margin-bottom: 150px;
+    margin-top: 50px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.card-info2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 30px;
+}
+
+.card-info2 p{
+    
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card-info2 p + p {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+>>>>>>> 4742a226abbdfe3227a596acddf3dbb5e27bdd58
+}

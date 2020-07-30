@@ -1,0 +1,46 @@
+<<<<<<< HEAD
+{% extends "layout.njk" %}
+
+{% block head %}
+        <title>Sobre - Vitor de Castro</title>
+    {% endblock %}
+
+{% block content %}
+    <div id="wrapper">
+        <img src="{{ about.avatar_url }}" alt="{{ about.name }}">
+        <h1>{{ about.name }}</h1>
+        <h2>{{ about.description }}</h2>
+        <p>{{ about.subDescription }}<a href="{{ about.links[2].url }}" target="_blank"> Contato profisional</a></p>
+        <!-- target="_blank" atributo a taga <a> que faz com que o link seja aberto em otura aba -->
+    </div>
+
+    <div id="links-footer" class="links">
+        <!-- a - elemento de click e redirecionamento de página -->
+        {% for link in about.links %}
+            <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+        {% endfor %}
+    </div> 
+=======
+{% extends "layout.njk" %}
+
+{% block head %}
+        <title>Sobre - Vitor de Castro</title>
+    {% endblock %}
+
+{% block content %}
+    <div id="wrapper">
+        <img src="{{ about.avatar_url }}" alt="{{ about.name }}">
+        <h1>{{ about.name }}</h1>
+        <h2>{{ about.description }}</h2>
+        <p>{{ about.subDescription }}<a href="{{ about.links[2].url }}" target="_blank"> Contato profisional</a></p>
+        <!-- target="_blank" atributo a taga <a> que faz com que o link seja aberto em otura aba -->
+    </div>
+
+    <div id="links-footer" class="links">
+        <!-- a - elemento de click e redirecionamento de página -->
+        {% for link in about.links %}
+            <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+        {% endfor %}
+    </div> 
+>>>>>>> 4742a226abbdfe3227a596acddf3dbb5e27bdd58
+{% endblock %}

@@ -1,0 +1,21 @@
+{
+  "name": "gymmanager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "intl": "^1.2.5",
+    "method-override": "^3.0.0",
+    "nunjucks": "^3.2.1"
+  }
+}

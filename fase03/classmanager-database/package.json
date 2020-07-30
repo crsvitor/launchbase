@@ -1,0 +1,59 @@
+<<<<<<< HEAD
+{
+  "name": "classmanager",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm-run-all -p nodemon browsersync",
+    "nodemon": "nodemon src/server.js",
+    "browsersync": "browser-sync start --proxy http://localhost:501 --files 'public,src/app/views'"
+  },
+  "dependencies": {
+    "audit": "0.0.6",
+    "express": "^4.17.1",
+    "fix": "0.0.6",
+    "intl": "^1.2.5",
+    "method-override": "^3.0.0",
+    "nunjucks": "^3.2.1",
+    "pg": "^8.2.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+=======
+{
+  "name": "classmanager",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm-run-all -p nodemon browsersync",
+    "nodemon": "nodemon src/server.js",
+    "browsersync": "browser-sync start --proxy http://localhost:501 --files 'public,src/app/views'"
+  },
+  "dependencies": {
+    "audit": "0.0.6",
+    "express": "^4.17.1",
+    "fix": "0.0.6",
+    "intl": "^1.2.5",
+    "method-override": "^3.0.0",
+    "nunjucks": "^3.2.1",
+    "pg": "^8.2.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+>>>>>>> 4742a226abbdfe3227a596acddf3dbb5e27bdd58

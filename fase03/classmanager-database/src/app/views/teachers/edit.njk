@@ -1,0 +1,60 @@
+<<<<<<< HEAD
+{% extends "layout.njk" %}
+
+{% block content %}
+{# method is a way so send info and action is to where this is sending #}
+<div class="card">
+    <section class="avatar"
+        style="background: url({{teacher.avatar_url}}) 
+        no-repeat center center / cover">
+    </section>
+    <section class="details">
+
+        <form method="POST" action="/teachers?_method=PUT">
+
+            <h3>Editar profissional</h3>
+
+            {% include "teachers/files.njk" %}
+
+            <input type="hidden" name="id" value={{teacher.id}}>
+        </form>
+        <form class="delete" id="form-delete" action="/teachers?_method=DELETE" method="post">
+            <input type="hidden" name="id" value={{teacher.id}}>
+            <button class="delete" type="submit" form="form-delete">Deletar</button>
+        </form>
+    </section>
+</div>
+
+{% include "teachers/confirmation.njk" %}
+
+=======
+{% extends "layout.njk" %}
+
+{% block content %}
+{# method is a way so send info and action is to where this is sending #}
+<div class="card">
+    <section class="avatar"
+        style="background: url({{teacher.avatar_url}}) 
+        no-repeat center center / cover">
+    </section>
+    <section class="details">
+
+        <form method="POST" action="/teachers?_method=PUT">
+
+            <h3>Editar profissional</h3>
+
+            {% include "teachers/files.njk" %}
+
+            <input type="hidden" name="id" value={{teacher.id}}>
+        </form>
+        <form class="delete" id="form-delete" action="/teachers?_method=DELETE" method="post">
+            <input type="hidden" name="id" value={{teacher.id}}>
+            <button class="delete" type="submit" form="form-delete">Deletar</button>
+        </form>
+    </section>
+</div>
+
+{% include "teachers/confirmation.njk" %}
+
+>>>>>>> 4742a226abbdfe3227a596acddf3dbb5e27bdd58
+{% endblock content %}

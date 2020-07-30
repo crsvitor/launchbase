@@ -1,0 +1,48 @@
+<<<<<<< HEAD
+{% extends "layout.njk" %}
+
+{% block head %}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<title>{{ item.id }}</title>
+{% endblock head %}
+
+{% block content %}
+    <div class="wrapper2">
+    <div class="courses-grid-template">
+            <div class="card2" id="{{ item.id }}">
+                <img src="/assets/{{ item.id }}.svg" alt="{{ item.id }}">
+                <h3>{{ item.description }}</h3>
+                <div class="card-info2">    
+                    <p>{{ item.modules }}</p>
+                    <p>{{ item.price}}</p>
+                </div>
+                <a href="https://rocketseat.com.br/{{item.id}}">Acesse a página oficial do curso</a>
+            </div>
+    </div>
+    </div>
+=======
+{% extends "layout.njk" %}
+
+{% block head %}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<title>{{ item.id }}</title>
+{% endblock head %}
+
+{% block content %}
+    <div class="wrapper2">
+    <div class="courses-grid-template">
+            <div class="card2" id="{{ item.id }}">
+                <img src="/assets/{{ item.id }}.svg" alt="{{ item.id }}">
+                <h3>{{ item.description }}</h3>
+                <div class="card-info2">    
+                    <p>{{ item.modules }}</p>
+                    <p>{{ item.price}}</p>
+                </div>
+                <a href="https://rocketseat.com.br/{{item.id}}">Acesse a página oficial do curso</a>
+            </div>
+    </div>
+    </div>
+>>>>>>> 4742a226abbdfe3227a596acddf3dbb5e27bdd58
+{% endblock content %}

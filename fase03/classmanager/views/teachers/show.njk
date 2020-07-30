@@ -1,0 +1,116 @@
+<<<<<<< HEAD
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="card">
+    <section class="avatar"
+    style="background: url({{teacher.avatar_url}})
+    no-repeat center center / cover">
+
+    </section>
+    <section class="details">
+        <h3>Detalhes</h3>
+
+		<div class="item">
+			<div>Professor(a)</div>
+			<div>{{teacher.name}}</div>
+		</div>
+
+		<div class="item">
+			<div>Idade</div>
+			<div>{{teacher.age}}</div>
+		</div>
+
+		<div class="item">
+			<div>Escolaridade</div>
+			<div>{{teacher.schooling}}</div>
+		</div>
+
+        <div class="item">
+			<div>Aula</div>
+			<div>
+            {% if teacher.classWay == "classrom-attendence"  %}
+            Presencial
+            {% endif %}
+            {% if teacher.classWay == "distance-class" %}
+            À distância
+            {% endif %}
+            </div>
+		</div>
+
+		<div class="item">
+			<div>Acompanhamento</div>
+			<div>
+            {% for service in teacher.services %}
+				<span>{{service}}</span>
+            {% endfor %}
+			</div>
+		</div>
+
+		<div class="item"> 
+			<div>Desde</div>
+			<div>{{teacher.createdAt}}</div>
+		</div>
+
+        <a href="/teachers/{{teacher.id}}/edit" class="button">Editar</a>
+    </section>
+</div>
+=======
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="card">
+    <section class="avatar"
+    style="background: url({{teacher.avatar_url}})
+    no-repeat center center / cover">
+
+    </section>
+    <section class="details">
+        <h3>Detalhes</h3>
+
+		<div class="item">
+			<div>Professor(a)</div>
+			<div>{{teacher.name}}</div>
+		</div>
+
+		<div class="item">
+			<div>Idade</div>
+			<div>{{teacher.age}}</div>
+		</div>
+
+		<div class="item">
+			<div>Escolaridade</div>
+			<div>{{teacher.schooling}}</div>
+		</div>
+
+        <div class="item">
+			<div>Aula</div>
+			<div>
+            {% if teacher.classWay == "classrom-attendence"  %}
+            Presencial
+            {% endif %}
+            {% if teacher.classWay == "distance-class" %}
+            À distância
+            {% endif %}
+            </div>
+		</div>
+
+		<div class="item">
+			<div>Acompanhamento</div>
+			<div>
+            {% for service in teacher.services %}
+				<span>{{service}}</span>
+            {% endfor %}
+			</div>
+		</div>
+
+		<div class="item"> 
+			<div>Desde</div>
+			<div>{{teacher.createdAt}}</div>
+		</div>
+
+        <a href="/teachers/{{teacher.id}}/edit" class="button">Editar</a>
+    </section>
+</div>
+>>>>>>> 4742a226abbdfe3227a596acddf3dbb5e27bdd58
+{% endblock content %}

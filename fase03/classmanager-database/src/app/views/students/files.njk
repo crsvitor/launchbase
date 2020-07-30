@@ -1,0 +1,210 @@
+<<<<<<< HEAD
+<div class="item">
+    <div>
+        Avatar URL
+    </div>
+    <div>
+        <input type="url" name="avatar_url" id="" placeholder="https://" value="{{student.avatar_url}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>
+        Nome
+    </div>
+    <div>
+        <input type="text" name="name" placeholder="Digite seu nome" value="{{student.name}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>
+        Email
+    </div>
+    <div>
+        <input type="email" name="email" placeholder="Ex: student@gmail.com" value="{{student.email}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>
+        Data de Nascimento
+    </div>
+    <div>
+        <input type="date" name="birth" value="{{student.birth}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>
+        Grau de escolaridade
+    </div>
+    <div>
+        <select name="schoolYear" id="schoolYear">
+            <option value="5-ano" {% if student.schoolYear == "5-ano" %} selected
+            {% endif %}>
+                5° ano do Ensino Fundamental
+            </option>
+            <option value="6-ano" {% if student.schoolYear == "6-ano" %} selected
+            {% endif %}>
+                6° ano do Ensino Fundamental
+            </option>
+            <option value="7-ano" {% if student.schoolYear == "7-ano" %} selected
+            {% endif %}>
+                7° ano do Ensino Fundamental
+            </option>
+            <option value="8-ano" {% if student.schoolYear == "8-ano" %} selected
+            {% endif %}>
+                8° ano do Ensino Fundamental
+            </option>
+            <option value="9-ano" {% if student.schoolYear == "9-ano" %} selected
+            {% endif %}>
+                9° ano do Ensino Fundamental
+            </option>
+            <option value="1-medio" {% if student.schoolYear == "1-medio" %} selected
+            {% endif %}>
+                1° ano do Ensino Médio
+            </option>
+            <option value="2-medio" {% if student.schoolYear == "2-medio" %} selected
+            {% endif %}>
+                2° ano do Ensino Médio
+            </option>
+            <option value="3-medio" {% if student.schoolYear == "3-medio" %} selected
+            {% endif %}>
+                3° ano do Ensino Médio
+            </option>
+        </select>
+    </div>
+</div>
+
+<div class="item">
+    <div>
+        Carga horária semanal
+    </div>
+    <div>
+        <input type="Number" name="studyHours" placeholder="Horas de interesse durante a semana" value="{{student.studyHours}}">
+    </div>
+</div>      
+
+<div class="item">
+    <div>
+        Professor(a)
+    </div>
+    <div>
+        <select name="teacher">
+            {% for teacher in teacherOptions %}
+                <option value="{{teacher.id}}" {% if student.teacher_id == teacher.id %} selected
+                {% endif %}>
+                    {{teacher.name}}
+                </option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+
+=======
+<div class="item">
+    <div>
+        Avatar URL
+    </div>
+    <div>
+        <input type="url" name="avatar_url" id="" placeholder="https://" value="{{student.avatar_url}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>
+        Nome
+    </div>
+    <div>
+        <input type="text" name="name" placeholder="Digite seu nome" value="{{student.name}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>
+        Email
+    </div>
+    <div>
+        <input type="email" name="email" placeholder="Ex: student@gmail.com" value="{{student.email}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>
+        Data de Nascimento
+    </div>
+    <div>
+        <input type="date" name="birth" value="{{student.birth}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>
+        Grau de escolaridade
+    </div>
+    <div>
+        <select name="schoolYear" id="schoolYear">
+            <option value="5-ano" {% if student.schoolYear == "5-ano" %} selected
+            {% endif %}>
+                5° ano do Ensino Fundamental
+            </option>
+            <option value="6-ano" {% if student.schoolYear == "6-ano" %} selected
+            {% endif %}>
+                6° ano do Ensino Fundamental
+            </option>
+            <option value="7-ano" {% if student.schoolYear == "7-ano" %} selected
+            {% endif %}>
+                7° ano do Ensino Fundamental
+            </option>
+            <option value="8-ano" {% if student.schoolYear == "8-ano" %} selected
+            {% endif %}>
+                8° ano do Ensino Fundamental
+            </option>
+            <option value="9-ano" {% if student.schoolYear == "9-ano" %} selected
+            {% endif %}>
+                9° ano do Ensino Fundamental
+            </option>
+            <option value="1-medio" {% if student.schoolYear == "1-medio" %} selected
+            {% endif %}>
+                1° ano do Ensino Médio
+            </option>
+            <option value="2-medio" {% if student.schoolYear == "2-medio" %} selected
+            {% endif %}>
+                2° ano do Ensino Médio
+            </option>
+            <option value="3-medio" {% if student.schoolYear == "3-medio" %} selected
+            {% endif %}>
+                3° ano do Ensino Médio
+            </option>
+        </select>
+    </div>
+</div>
+
+<div class="item">
+    <div>
+        Carga horária semanal
+    </div>
+    <div>
+        <input type="Number" name="studyHours" placeholder="Horas de interesse durante a semana" value="{{student.studyHours}}">
+    </div>
+</div>      
+
+<div class="item">
+    <div>
+        Professor(a)
+    </div>
+    <div>
+        <select name="teacher">
+            {% for teacher in teacherOptions %}
+                <option value="{{teacher.id}}" {% if student.teacher_id == teacher.id %} selected
+                {% endif %}>
+                    {{teacher.name}}
+                </option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+
+>>>>>>> 4742a226abbdfe3227a596acddf3dbb5e27bdd58
+<button type="submit">Salvar</button>
