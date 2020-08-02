@@ -6,7 +6,7 @@
     <form method="POST" action="/products?_method=PUT">
         
         <div class="header">
-            <h3>Editar Produto {{productId}}</h3>
+            <h3>Editar Produto</h3>
         </div>
 
         <div class="fields">
@@ -18,16 +18,17 @@
         <button class="button edit" type="submit">Atualizar</button>
     </form>
 
-    <form method="post" action="/products?_method=DELETE">
+    <form id="form-delete" method="POST" action="/products?_method=DELETE">
         <input type="hidden" name="id" value={{product.id}}>
         <button class="button delete" type="submit">Deletar</button>
     </form>
 </section>
 
 <script>
-    const formDelete = document.query("#form-delete");
+    const formDelete = document.querySelector("#form-delete");
     formDelete.addEventListener("submit", function(event) {
         const confirmation = confirm("Deseja Deletar");
+        
         if(!confirmation){
             event.preventDefault();
         }
