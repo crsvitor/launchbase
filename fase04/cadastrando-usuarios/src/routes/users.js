@@ -1,7 +1,7 @@
 const express = require('express');
 const routes = express.Router();
 
-const SessionController = require('../app/controllers/SessionController');
+// const SessionController = require('../app/controllers/SessionController');
 const UserController = require('../app/controllers/UserController');
 
 // user
@@ -10,14 +10,14 @@ const UserController = require('../app/controllers/UserController');
 // routes.post('/login', SessionController.login);
 // routes.post('/logout', SessionController.logout);
 
-// reset password / forgot
+// reset password / forgot - SessionController
 // routes.get('/forgot-password', SessionController.forgotForm);
 // routes.get('/password-reset', SessionController.resetForm);
 // routes.post('/forgot-password', SessionController.forgot);
 // routes.post('/password-reset', SessionController.reset);
 
-// user register
-// routes.get('/register', UserController.registerForm);
+// user register - UserController
+routes.get('/register', UserController.registerForm);
 // routes.get('/register', UserController.post);
 
 // routes.get('/', UserController.show);
