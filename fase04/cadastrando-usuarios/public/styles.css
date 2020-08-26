@@ -596,10 +596,20 @@ form .item #photos-preview img {
     max-width: 500px;
 }
 
-.form input[name="email"],
+/* .form input[name="email"],
 .form input[name="pasword"],
 .form input[name="passwordRepeat"],
 .form input[name="cep"],
 .form input[name="cpf_cnpj"] {
     max-width: 60%;
+} */
+
+/* validate errors */
+.input .error {
+    background-color: #e74c3c;
+    padding: 4px;
+    border-radius: 4px;
+    color: white;
+
+    /* max-width: 60%;  eu adicionei por mim mesmo */
 }
