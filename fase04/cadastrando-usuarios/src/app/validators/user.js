@@ -6,7 +6,10 @@ async function post(req, res, next) {
         
     for (key of keys) {
         if(req.body[key] == "") {
-            return res.send('Please, fill all fields!');
+            return res.render('user/register', {
+                user: req.body, 
+                error: 'Preencha todos os campos'
+            });
         }
     }
 
@@ -21,11 +24,17 @@ async function post(req, res, next) {
     });
 
     if(user) {
-        return res.send('Users exists')
+        return res.render('user/register', {
+            user: req.body, 
+            error: 'Usuário já cadastrado'
+        });
     }
     //check if password match
     if(password != passwordRepeat) {
-        return res.send('Password Mismatch')
+        return res.render('user/register', {
+            user: req.body, 
+            error: 'Preencha as senhas de forma iguais'
+        });
     }
 
     next();
