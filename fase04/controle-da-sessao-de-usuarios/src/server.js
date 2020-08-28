@@ -2,8 +2,11 @@ const express = require('express');
 const nunjucks = require('nunjucks');
 const routes = require("./routes");
 const methodOverride = require('method-override');
+const session = require('./config/session');
 
 const server = express();
+
+server.use(session);
 
 //linha responsável por fazer funcionar o req body
 server.use(express.urlencoded({ extended: true }));
