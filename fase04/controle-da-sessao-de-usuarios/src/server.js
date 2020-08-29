@@ -7,6 +7,10 @@ const session = require('./config/session');
 const server = express();
 
 server.use(session);
+server.use((req, res, next) => {
+    res.locals.session = req.session;
+    next();
+});
 
 //linha responsável por fazer funcionar o req body
 server.use(express.urlencoded({ extended: true }));
