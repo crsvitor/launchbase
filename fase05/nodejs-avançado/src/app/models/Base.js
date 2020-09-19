@@ -30,7 +30,7 @@ const Base = {
     },
     async find(id) {
         const results = await find({ where: { id }}, this.table);
-        return results.rows;
+        return results.rows[0];
     },
     async findOne(filters) {
         const results = await find(filters, this.table);

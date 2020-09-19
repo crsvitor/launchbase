@@ -56,7 +56,7 @@ module.exports = {
                 success: "Verifique seu email para resetar sua senha!"
             });
 
-        } catch {
+        } catch(err) {
             console.error(err);
             return res.render("session/forgot-password", {
                 error: "Um erro ocorreu, tente novamente"

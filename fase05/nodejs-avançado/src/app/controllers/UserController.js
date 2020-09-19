@@ -1,4 +1,4 @@
-const { unlikSync, fstat } = require('fs');
+const { unlikSync } = require('fs');
 const { hash } = require('bcryptjs');
 
 const User = require('../models/User');
@@ -25,7 +25,7 @@ module.exports = {
     },
     async post(req, res) {
         try {
-            const { name, email, password, cpf_cnpj, cep, address } = req.body;
+            let { name, email, password, cpf_cnpj, cep, address } = req.body;
 
             password = await hash(password, 8);
             cpf_cnpj = cpf_cnpj.replace(/\D/g, "");
@@ -88,11 +88,11 @@ module.exports = {
             await User.delete(req.body.id);
             req.session.destroy();
 
-            promiseResults.map(results => {
-                results.rows.map(file => {
+            promiseResults.map(files => {
+                files.map(file => {
                     try {
                         unlikSync(file.path);                        
-                    } catch (error) {
+                    } catch(error) {
                         console.error(err);
                     }
                 })
@@ -102,7 +102,7 @@ module.exports = {
                 success: "Conta deletada com sucesso!"
             });
             
-        } catch (err) {
+        } catch(err) {
             console.error(err);
             return res.render("user/index", {
                 error: "Erro ao tentar deletar sua conta!"
