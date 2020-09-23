@@ -28,5 +28,8 @@ routes.get('/', onlyUsers, UserValidator.show, UserController.show);
 routes.put('/', onlyUsers, UserValidator.update, UserController.update);
 routes.delete('/', UserController.delete);
 
+
+routes.get('/ads', UserController.ads);
+
 // rotas sendo exportadas
 module.exports = routes;
