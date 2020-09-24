@@ -3,6 +3,7 @@ const routes = express.Router();
 
 const SessionController = require('../app/controllers/SessionController');
 const UserController = require('../app/controllers/UserController');
+const OrderController = require('../app/controllers/OrderController');
 
 const UserValidator = require('../app/validators/user');
 const SessionValidator = require('../app/validators/session');
@@ -28,8 +29,9 @@ routes.get('/', onlyUsers, UserValidator.show, UserController.show);
 routes.put('/', onlyUsers, UserValidator.update, UserController.update);
 routes.delete('/', UserController.delete);
 
+routes.get('/ads', onlyUsers, UserController.ads);
 
-routes.get('/ads', UserController.ads);
+routes.post('/orders', onlyUsers, OrderController.post);
 
 // rotas sendo exportadas
 module.exports = routes;
