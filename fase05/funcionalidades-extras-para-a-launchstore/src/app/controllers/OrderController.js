@@ -4,6 +4,7 @@ const Order = require('../models/Order');
 
 const Cart = require('../../lib/cart');
 const mailer = require('../../lib/mailer');
+const { formatPrice, date } = require('../../lib/utils');
 
 const email = (seller, product, buyer) => `
 <h2>Olá ${seller.name}</h2>
@@ -24,6 +25,50 @@ const email = (seller, product, buyer) => `
 
 
 module.exports = {
+    async index(req, res) {
+        // pegar os pedidos do usuário 
+        let orders = await Order.findAll({ where: { buyer_id: req.session.userId } }); 
+
+        const getOrdersPromise = orders.map(async order => {
+            // detalhes do produto
+            order.product = await LoadProductService.load('products', {
+                where: { id: order.product_id }
+            });
+
+            // detalhes do comprador
+            order.buyer = await User.findOne({
+                where: { id: order.buyer_id }
+            });
+
+            // detalhes do vendedor
+            order.seller = await User.findOne({
+                where: { id: order.seller_id }
+            });
+
+            // formatação do preço
+            order.formattedPrice = formatPrice(order.price);
+            order.formattedTotal = formatPrice(order.total);
+
+            // formatação do status
+            const statuses = {
+                open: 'Aberto',
+                sold: 'Vendido',
+                canceled: 'Cancelado'
+            }
+
+            order.formattedStatus = statuses[order.status];
+
+            // formatação de atualizado em 
+            const updatedAt = date(order.updated_at);
+            order.formattedUpdatedAt = `${order.formattedStatus} em ${updatedAt.day}/${updatedAt.month}/${updatedAt.year} em ${updatedAt.hour}h ${updatedAt.minutes}m`;
+
+            return order;
+        });
+
+        orders = await Promise.all(getOrdersPromise);
+
+        return res.render("orders/index", { orders });
+    },
     async post(req, res) {
         try {
 
@@ -74,6 +119,10 @@ module.exports = {
             });
 
             await Promise.all(crateOrdersPromise);
+
+            // clean cart 
+            delete req.session.cart;
+            Cart.init
 
             // notificar o usuário dcom alguma mensagem do sucesso
             return res.render('orders/success');
