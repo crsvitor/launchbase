@@ -1,4 +1,4 @@
-# launchbase
+# LaunchBase
 
 ##Hi! I am Vitor and these are my study code that I've made during LaunchBase Bootcamp, by Rocketseat.
 
